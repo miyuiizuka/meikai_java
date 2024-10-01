@@ -16,8 +16,8 @@ public class Exercise1_1 {
 	 * 作成日:2024/10/01
 	 */
 	public static void main(String[] args) {
-		
-		//セミコロンが欠如している場合の動作確認
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("初めてのJavaプログラム。");
 		System.out.println("画面に出力しています。")
 	}
 }
