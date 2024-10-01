@@ -10,7 +10,7 @@ public class Exercise2_2 {
 
 	/*
 	 * 関数名:main
-	 * 概要:3つのint型変数に値を代入し、合計と平均を求めるプログラム
+	 * 概要:int型変数に値を代入し、合計と平均を求めるプログラム
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:M.Iizuka
@@ -23,6 +23,8 @@ public class Exercise2_2 {
 		int secondNumber = 0;
 		//int型変数3の初期値を設定
 		int thirdNumber = 0;
+		//変数の合計数を代入するint型変数の初期値を設定
+		int sumNumber = 0;
 		
 		//変数1に値を代入
 		firstNumber = 20;
@@ -30,11 +32,13 @@ public class Exercise2_2 {
 		secondNumber = 30;
 		//変数3に値を代入
 		thirdNumber =40;
+		//変数の合計数を代入
+		sumNumber = 3;
 		
 		//変数1～3の合計を出力
 		System.out.println("合計は" + (firstNumber + secondNumber + thirdNumber) + "です。");
 		//変数1～3の平均を出力
-		System.out.println("平均は" + (firstNumber + secondNumber + thirdNumber)/3 +"です。");
+		System.out.println("平均は" + (firstNumber + secondNumber + thirdNumber) / sumNumber +"です。");
 		
 		
 		
