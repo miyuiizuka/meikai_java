@@ -17,6 +17,7 @@ public class Exercise1_3 {
 	 * 作成日:2024/10/01
 	 */
 	public static void main(String[] args) {
+		//各行に1文字ずつ名前を表示する（姓と名の間は1行あける）
 		System.out.println("飯\n塚\n"+""+"\n美\n友");
 
 	}
