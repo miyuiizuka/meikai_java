@@ -32,18 +32,24 @@ public class Exercise2_9 {
 		//0.0以上1.0未満の実数値をランダムに生成する
 		randomDouble = randomNumber.nextDouble();
 		//10.0未満になる整数値の最大値を設定する
-		int rangeInt = 10; 
-		//0から9の整数値をランダムに生成する
-		int randomInt = randomNumber.nextInt( rangeInt );
+		int maxInt = 10; 
+		//整数値をランダムに生成する
+		int randomInt = randomNumber.nextInt( maxInt );
 		//0.0以上10.0未満の生成された実数値（実数値＋整数値）を表示する
 		System.out.println( randomDouble + randomInt );
 		
 		//0.0以上1.0未満の実数値をランダムに生成する
 		randomDouble = randomNumber.nextDouble();
-		//-1.0以上になる調節値を設定する
-		int ajustInt = 1;
+		//実数値の最大値を変数に格納する
+		maxInt = 1;
+		//実数値の最小値を変数に格納する
+		int minimumInt = -1;
+		//実数値の範囲を求める
+		int rangeInt = maxInt - minimumInt;
+		//最小値に足す乱数を生成する
+		randomInt = randomNumber.nextInt( rangeInt );
 		//-1.0以上1.0未満の生成された実数値を表示する
-		System.out.println( randomDouble - ajustInt);
+		System.out.println( minimumInt + randomInt + randomDouble );
 		
 
 	}
