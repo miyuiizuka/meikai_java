@@ -40,7 +40,7 @@ public class Exercise2_5 {
 		//xとyの合計を算出し出力する
 		System.out.println("合計は" + (x + y) + "です。");
 		//xとyの平均を算出し出力する
-		System.out.println("平均は" + (x + y) / sumNumber7. + "です。");
+		System.out.println("平均は" + (x + y) / sumNumber + "です。");
 
 	}
 
