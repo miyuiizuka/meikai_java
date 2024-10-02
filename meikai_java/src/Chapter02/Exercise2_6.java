@@ -37,8 +37,11 @@ public class Exercise2_6 {
 		//高さの変数に実数値を読み込む
 		double heightNumber = standardInput.nextDouble();
 		
+		//変数に割る値を代入する
+		int divideNumber = 2;
+		
 		//面積を計算し出力する
-		System.out.println("面積は" + baseNumber * heightNumber / 2 + "です。");
+		System.out.println("面積は" + baseNumber * heightNumber / divideNumber + "です。");
 				
 
 	}
