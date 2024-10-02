@@ -30,12 +30,12 @@ public class Exercise2_4 {
 		int inputInt = standardInput.nextInt();
 		
 		//加算・減算する値を変数に代入
-		int CALCULATE_INT = 10;
+		int calculateInt = 10;
 		
 		//キーボードから読み込んだ整数値に10を加算した値を出力する
-		System.out.println( CALCULATE_INT + "を加えた値は" + ( inputInt + CALCULATE_INT ) + "です。");
+		System.out.println( calculateInt + "を加えた値は" + ( inputInt + calculateInt ) + "です。");
 		//キーボードから読み込んだ整数値に10を減算した値を出力する
-		System.out.println( CALCULATE_INT + "を減じた値は" + ( inputInt - CALCULATE_INT ) + "です。");
+		System.out.println( calculateInt + "を減じた値は" + ( inputInt - calculateInt ) + "です。");
 		
 	}
 
