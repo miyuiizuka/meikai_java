@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 作成者:M.Iizuka
  * 作成日:2024/10/03
  */
-public class Exerscise3_4 {
+public class Exercise3_4 {
 
 	/*
 	 * 関数名:main
