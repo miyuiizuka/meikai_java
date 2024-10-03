@@ -27,17 +27,17 @@ public class Exercise3_4 {
 		//変数aの入力を促す
 		System.out.print("変数a：");
 		//aに入力された値を読み込む
-		double a = standardInput.nextDouble();
+		double variableA = standardInput.nextDouble();
 		//変数bの入力を促す
 		System.out.print("変数b：");
 		//bに入力された値を読み込む
-		double b = standardInput.nextDouble();
+		double variableB = standardInput.nextDouble();
 				
 		//aとbが同じ値であるかを判定する
-		if ( a != b ) {
+		if ( variableA != variableB ) {
 			
 			//aがbより大きいかどうかを判定する
-			if ( a > b ) {
+			if ( variableA > variableB ) {
 				//aがbより大きい場合の結果を出力する
 				System.out.println("aの方が大きいです。");
 			//bがaより大きい場合
