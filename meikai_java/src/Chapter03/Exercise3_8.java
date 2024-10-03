@@ -20,29 +20,36 @@ public class Exercise3_8 {
 	 * 作成日:2024/10/03
 	 */
 	public static void main(String[] args) {
-		
+
 		//キーボードから読み込んだ値を抽出する
 		Scanner standardInput = new Scanner(System.in);
 		//点数の入力を促す
 		System.out.print("点数：");
 		//入力された点数を変数に格納する
 		int inputScore = standardInput.nextInt();
-		
-		//0点から59点の場合
-		if ( inputScore >= 0 && inputScore <= 59 ) {
-			//評価を出力する
-			System.out.println("不可");
-		//60点から69点の場合の評価を出力する	
-		} else if ( inputScore >= 60 && inputScore <= 69 ) {
-			System.out.println("可");
-		//70点から79点の場合の評価を出力する
-		} else if ( inputScore >= 70 && inputScore <= 79 ) {
-			System.out.println("良");
-		//80点から100点の場合の評価を出力する
-		} else if ( inputScore >= 80 && inputScore <= 100 ) {
-			System.out.println("優");
+
+		//0点以上100点以下の点数が入力されているか判定する
+		if (inputScore >= 0 && inputScore <= 100) {
+			//0点から59点の場合
+			if (inputScore >= 0 && inputScore <= 59) {
+				//評価を出力する
+				System.out.println("不可");
+			//60点から69点の場合の評価を出力する	
+			} else if (inputScore >= 60 && inputScore <= 69) {
+				System.out.println("可");
+			//70点から79点の場合の評価を出力する
+			} else if (inputScore >= 70 && inputScore <= 79) {
+				System.out.println("良");
+			//80点から100点の場合の評価を出力する
+			} else if (inputScore >= 80 && inputScore <= 100) {
+				System.out.println("優");
+			}
+		//点数が不正である場合
+		} else {
+			//正しい点数を入力するよう促す
+			System.out.println("0点以上100点以下の点数を入力してください。");
 		}
-		
+				
 	}
 
 }
