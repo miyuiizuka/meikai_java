@@ -33,15 +33,29 @@ public class Exercise3_2 {
 		//二つ目の整数値を変数に格納する
 		int secondNumber = standardInput.nextInt();
 		
-		//二つ目の整数が1つ目の約数であるかを判別
-		if ( firstNumber % secondNumber ==0 ) {
-			//約数である場合の結果を出力する
-			System.out.println("BはAの約数です。");
+		//余りを格納する変数を宣言する
+		int remainderNumber = 0;
+		
+		
+		//二つの整数値が正であるかどうかを判定する
+		if ( firstNumber > 0 && secondNumber > 0) {
+			//どちらも正である場合、一つ目の整数÷2つ目の整数の余りを算出する
+			remainderNumber = firstNumber % secondNumber; 
 			
-		//約数でない場合
+			//二つ目の整数が一つ目の約数であるかを判別
+			if ( remainderNumber == 0 ) {
+				//約数である場合の結果を出力する
+				System.out.println("BはAの約数です。");				
+			//約数でない場合
+			} else {
+				//結果を出力する
+				System.out.println("BはAの約数ではありません。");
+			}
+		
+		//どちらかの整数値が正でない場合
 		} else {
 			//結果を出力する
-			System.out.println("BはAの約数ではありません。");
+			System.out.println("正の整数値を入力してください。");		
 		}
 		
 
