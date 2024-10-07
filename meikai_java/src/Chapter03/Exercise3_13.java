@@ -52,6 +52,7 @@ public class Exercise3_13 {
 				medianInt = thirdInt;
 			//一つ目の値が三つ目の値より大きい場合
 			} else {
+				//中央値を一つ目の値とする
 				medianInt = firstInt;
 
 			}
