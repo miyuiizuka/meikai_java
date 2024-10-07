@@ -24,26 +24,29 @@ public class Exercise3_17 {
 		//生成された乱数の値を抽出する
 		Random randomNumber = new Random();
 		//手の種類の数を設定する
-		int sumHand = 3;
+		final int SUM_HAND = 3;
 		//抽出された乱数を変数に格納する
-		int handNumber = randomNumber.nextInt(sumHand);
+		int handRandom = randomNumber.nextInt(SUM_HAND);
+
 		//手の種類
 		String handName = "";
 
 		//乱数による手の種類
-		switch (handNumber) {
-		//0が生成された場合
-		case 0:
+		switch (handRandom) {
+		//グーの番号が生成された場合
+		case SUM_HAND-3:
 			//グーを格納
 			handName = "グー";
 			//switch文を抜ける
 			break;
-		case 1:
+		//チョキの番号が生成された場合
+		case SUM_HAND-2:
 			//チョキを格納
 			handName = "チョキ";
 			//switch文を抜ける
 			break;
-		case 2:
+		//パーの番号が生成された場合
+		case SUM_HAND-1:
 			//パーを格納
 			handName = "パー";
 			//switch文を抜ける
