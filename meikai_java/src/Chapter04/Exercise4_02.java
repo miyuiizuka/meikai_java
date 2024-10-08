@@ -27,19 +27,21 @@ public class Exercise4_02 {
 		//入力された数字を抽出する
 		Scanner standardInput = new Scanner(System.in);
 
-		//正解の数字作成のための最小値を設定する
+		//正解の数字の最小値を設定する
 		final int CORRECT_MINIMUM_NUMBER = 10;
-		//正解の数字作成のための最大値+1を設定する
-		int CORRECT_MAX_NUMBER = 100;
+		//正解の数字の最大値を設定する
+		final int CORRECT_MAX_NUMBER = 99;
+		//正解の数字を生成するための乱数の個数を求める
+		final int CORRECT_MAX_SUM = CORRECT_MAX_NUMBER+1;
 		//正解の数字
 		int correctNumber = 0;
 
 		//正解の数字が最小値から最大値の範囲で作成されるまで生成を繰り返す
 		do {
 			//正解の数字の生成
-			correctNumber = randomNumber.nextInt(CORRECT_MAX_NUMBER);
+			correctNumber = randomNumber.nextInt(CORRECT_MAX_SUM);
 			//最小値以上の正解の数字が生成されるまで繰り返す
-		} while (correctNumber <= CORRECT_MINIMUM_NUMBER);
+		} while (correctNumber < CORRECT_MINIMUM_NUMBER);
 
 		//ゲーム開始の文言
 		System.out.println("数当てゲーム開始！！");
@@ -53,12 +55,19 @@ public class Exercise4_02 {
 		do {
 			//最小値から最大値の範囲の数字を入力してもらう
 			do {
-				///数字の入力を促す
+				//数字の入力を促す
 				System.out.println("いくつかな：");
-				//入力された数字をプレイヤーの答え
+				//入力された数字をプレイヤーの答えとする
 				answerNumber = standardInput.nextInt();
-				//適切な数字が入力されるまで繰り返す
-			} while (!(answerNumber >= CORRECT_MINIMUM_NUMBER && answerNumber <= CORRECT_MAX_NUMBER));
+
+				//入力された数字が適切であるか判定する
+				if (answerNumber < CORRECT_MINIMUM_NUMBER || answerNumber > CORRECT_MAX_NUMBER) {
+					//適切な数字の入力促す
+					System.out.println(CORRECT_MINIMUM_NUMBER + "～" + CORRECT_MAX_NUMBER + "の数を入力してください。");
+				}
+
+			//適切な数字が入力されるまで繰り返す
+			} while (answerNumber < CORRECT_MINIMUM_NUMBER || answerNumber > CORRECT_MAX_NUMBER);
 
 			//正解よりプレイヤーの答えが大きい場合
 			if (answerNumber > correctNumber) {
@@ -69,9 +78,9 @@ public class Exercise4_02 {
 				//もっと大きい数字を入力するよう促す
 				System.out.println("もっと大きな数だよ。");
 
-		//不正解であれば繰り返す
+			//不正解であれば繰り返す
 		} while (answerNumber != correctNumber);
-		
+
 		//正解を伝える
 		System.out.println("正解です。");
 	}
