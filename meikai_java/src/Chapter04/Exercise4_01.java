@@ -22,7 +22,11 @@ public class Exercise4_01 {
 	public static void main(String[] args) {
 		//入力された値を抽出する
 		Scanner standardInput = new Scanner(System.in);
-		//もう一度行うか
+		//もう一度行うときの番号
+		final int RETRY_NUMBER = 1;
+		//処理を終わるときの番号
+		final int COMPLETE_NUMBER = 0;
+		//入力された番号
 		int retryNumber = 1;
 
 		//1以外が選択されるまで処理を繰り返す
@@ -45,12 +49,18 @@ public class Exercise4_01 {
 				//0である場合
 				System.out.println("その値は0です。");
 			}
-			//もう一度実行するか入力を促す
-			System.out.print("もう一度？　1…Yes／0…No：");
-			//入力された番号を読み込む
-			retryNumber = standardInput.nextInt();
+			
+			//適切な数字が入力されるまで数字を入力してもらう
+			do {
+				//数字の入力を促す
+				System.out.print("もう一度？　1…Yes／0…No：");
+				//入力された番号を読み込む
+				retryNumber = standardInput.nextInt();
+				//不正な数字が入力されている間は処理を繰り返す
+			} while (retryNumber != RETRY_NUMBER && retryNumber != COMPLETE_NUMBER);
+
 			//再実行するか決定する
-		} while (retryNumber == 1);
+		} while (retryNumber == RETRY_NUMBER);
 
 	}
 
