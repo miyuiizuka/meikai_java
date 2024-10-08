@@ -34,9 +34,10 @@ public class Exercise4_10 {
 		//入力値が正しい数値の場合
 		if (inputNumber >= minimumNumber) {
 			//入力された値の分だけ*を表示させる
-			for (int indexNumber = 0; indexNumber < inputNumber; indexNumber++)
+			for (int indexNumber = 0; indexNumber < inputNumber; indexNumber++) {
 				//*を出力する
 				System.out.print('*');
+			}
 			//改行する
 			System.out.println();
 		}
