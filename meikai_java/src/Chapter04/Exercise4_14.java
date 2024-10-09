@@ -35,7 +35,7 @@ public class Exercise4_14 {
 			//入力された値を読み込む
 			inputNumber = standardInput.nextInt();
 			//不正な値が入力された場合
-			if (inputNumber <= INPUT_MINIMUM_NUMBER) {
+			if (inputNumber < INPUT_MINIMUM_NUMBER) {
 				//正しい数値を入力するよう促す
 				System.out.println("正の整数値を入力してください。");
 			}
@@ -52,11 +52,11 @@ public class Exercise4_14 {
 			//最後の足す数出ない場合
 			if (indexNumber < inputNumber) {
 				//式を表示する
-				System.out.print(indexNumber + "+");
+				System.out.print(indexNumber + " + ");
 				//最後の足す数字の場合
 			} else {
 				//計算結果を出力する
-				System.out.println(indexNumber + "=" + sumNumber);
+				System.out.println(indexNumber + " = " + sumNumber);
 			}
 		}
 
