@@ -31,7 +31,7 @@ public class Exercise4_15 {
 		int inputRangeHeight = 0;
 
 		//入力可能とする身長の下限値
-		final int MINIMUM_HEGHT = 40;
+		final int MINIMUM_HEGHT = 100;
 		//入力可能とする身長の最大値
 		final int MAX_HEIGHT = 250;
 		//入力可能な身長の幅

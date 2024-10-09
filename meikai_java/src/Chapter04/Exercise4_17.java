@@ -24,15 +24,25 @@ public class Exercise4_17 {
 		//入力された値を抽出する
 		Scanner standardInput = new Scanner(System.in);
 
-		//入力を促す
-		System.out.print("整数値：");
-		//入力された値を読み込む
-		int inputNumber = standardInput.nextInt();
-		//負の整数値が入力された場合
-		if (inputNumber < 0) {
-			//正の同値に置き換える
-			inputNumber = -inputNumber;
-		}
+		//入力可能な数値の基準値を設定する
+		final int INPUT_MINIMUM_NUMBER = 1;
+		//入力された値
+		int inputNumber = 0;
+
+		//正しい数値が入力してもらう
+		do {
+			//整数値の入力を促す
+			System.out.print("整数値：");
+			//入力された値を読み込む
+			inputNumber = standardInput.nextInt();
+			//不正な値が入力された場合
+			if (inputNumber < INPUT_MINIMUM_NUMBER) {
+				//正しい数値を入力するよう促す
+				System.out.println("正の整数値を入力してください。");
+			}
+			//正しい数値が入力されるまで繰り返す
+		} while (inputNumber < INPUT_MINIMUM_NUMBER);
+
 		//約数の個数の合計
 		int sumDivisor = 0;
 
