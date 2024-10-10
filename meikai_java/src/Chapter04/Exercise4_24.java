@@ -24,7 +24,7 @@ public class Exercise4_24 {
 		Scanner standardInput = new Scanner(System.in);
 
 		//入力可能な数値の基準値を設定する
-		final int INPUT_MINIMUM_NUMBER = 0;
+		final int INPUT_MINIMUM_NUMBER = 1;
 		//入力値
 		int inputNumber = 0;
 		//正の整数値を入力してもらう
@@ -36,7 +36,7 @@ public class Exercise4_24 {
 			//不正な値が入力された場合
 			if (inputNumber <= INPUT_MINIMUM_NUMBER) {
 				//正しい値を入力してもらうよう促す
-				System.out.println("正の整数値を入力してください。");
+				System.out.println("2以上の整数値を入力してください。");
 			}
 			//正しい値が入力されるまで処理を続ける
 		} while (inputNumber <= INPUT_MINIMUM_NUMBER);

@@ -47,6 +47,9 @@ public class Exercise4_25_2 {
 		int sumNumber = 0;
 		//合計の最大値
 		int maxSumNumber = 1000;
+		//平均を求めるための個数
+		int averageNumber = 0;
+		
 		//合計値を算出する
 		for (int plusNumber = 0; plusNumber < sumPlusNumber; plusNumber++) {
 			//加算する整数値の入力を促す
@@ -64,11 +67,13 @@ public class Exercise4_25_2 {
 			}
 			//合計値を算出する
 			sumNumber += inputNumber;
+			//平均を求めるための個数としてカウント
+			averageNumber++;
 		}
 		//合計値を表示する
 		System.out.println("合計は" + sumNumber + "です。");
 		//平均値を表示する
-		System.out.println("平均は" + sumNumber / sumPlusNumber + "です。");
+		System.out.println("平均は" + sumNumber / averageNumber + "です。");
 	}
 
 }
