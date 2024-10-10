@@ -29,8 +29,8 @@ public class Exercise4_23 {
 		int inputNumber = 0;
 		//正しい数値を入力してもらう
 		do {
-			//正方形の段数の入力を促す
-			System.out.print("何段の正方形を表示しますか：");
+			//ピラミッドの段数の入力を促す
+			System.out.print("何段のピラミッドを表示しますか：");
 			//入力された値を読み込む
 			inputNumber = standardInput.nextInt();
 			//不正な値が入力された場合
