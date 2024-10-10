@@ -1,12 +1,13 @@
 package Chapter04;
 
+//入力ストリーム
 import java.util.Scanner;
 
 /*
  * クラス名:Exercise4_23
  * 概要:入力された段数の数字ピラミッドを表示するプログラム
  * 作成者:M.Iizuka
- * 作成日:2024/10/10 概要:入力された
+ * 作成日:2024/10/10
  */
 public class Exercise4_23 {
 
