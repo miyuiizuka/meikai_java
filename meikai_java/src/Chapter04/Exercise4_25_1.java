@@ -49,7 +49,7 @@ public class Exercise4_25_1 {
 		final int END_NUMBER = 0;
 		//平均を求めるための個数
 		int averageNumber = 0;
-		
+
 		//合計値を算出する
 		for (int plusNumber = 0; plusNumber < sumPlusNumber; plusNumber++) {
 			//加算する整数値の入力を促す
@@ -65,11 +65,20 @@ public class Exercise4_25_1 {
 			sumNumber += inputNumber;
 			//平均を求めるための個数としてカウント
 			averageNumber++;
+
 		}
 		//合計値を表示する
 		System.out.println("合計は" + sumNumber + "です。");
-		//平均値を表示する
-		System.out.println("平均は" + sumNumber / averageNumber + "です。");
+		//平均の個数が0の場合
+		if (averageNumber == 0) {
+			//結果を表示する
+			System.out.println("平均は求められませんでした。");
+			//平均の個数が0でない場合
+		} else {
+			//平均値を表示する
+			System.out.println("平均は" + sumNumber / averageNumber + "です。");
+		}
+
 	}
 
 }

@@ -69,8 +69,15 @@ public class Exercise4_26 {
 		}
 		//合計値を表示する
 		System.out.println("合計は" + sumNumber + "です。");
-		//平均値を表示する
-		System.out.println("平均は" + sumNumber / (sumPlusNumber - sumNegativeNumber) + "です。");
+		//平均の個数が0の場合
+		if ((sumPlusNumber - sumNegativeNumber) == 0) {
+			//結果を表示する
+			System.out.println("平均は求められませんでした。");
+			//平均の個数が0でない場合
+		} else {
+			//平均値を表示する
+			System.out.println("平均は" + sumNumber / (sumPlusNumber - sumNegativeNumber) + "です。");
+		}
 	}
 
 }
