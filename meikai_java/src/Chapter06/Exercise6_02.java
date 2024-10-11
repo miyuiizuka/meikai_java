@@ -33,7 +33,7 @@ public class Exercise6_02 {
 			//次の要素を格納
 			elementNumber--;
 			//要素を出力
-			System.out.println(integerArray[arrayNumber]);
+			System.out.println("integerArray[" + arrayNumber + "] = " + integerArray[arrayNumber]);
 		}
 	}
 
