@@ -20,24 +20,24 @@ public class Exercise6_03 {
 	 */
 	public static void main(String[] args) {
 		//配列の要素数を設定
-		int sumArrayNumber = 9;
+		int sumArrayNumber = 5;
 		//配列を用意
 		double[] doubleArray = new double[sumArrayNumber];
-		//要素の初期値を設定
-		double elementNumber = 1.1;
-		//要素の数値を求めるための変数
-		double sumElementNumber = 0;
+		//要素の値の変数
+		double elementNumber = 0;
+		//要素を求めるためのかける値を設定
+		int multiplyElementNumber = 11;
+		//要素の数値を小数に調性するための値を設定
+		int divideElementNumber = 10;
 
 		//数値を順番に格納
 		for (int arrayNumber = 0; arrayNumber < doubleArray.length; arrayNumber++) {
 			//要素の値を求める
-			sumElementNumber += elementNumber;
+			elementNumber = multiplyElementNumber * (arrayNumber + 1);
 			//要素を取得する
-			doubleArray[arrayNumber] = sumElementNumber;
+			doubleArray[arrayNumber] = elementNumber / divideElementNumber;
 			//数値を出力
-			System.out.print("doubleArray[" + arrayNumber + "] = ");
-			//数値の有効桁数を指定して出力
-			System.out.printf("%2.1f\n", doubleArray[arrayNumber]);
+			System.out.println("doubleArray[" + arrayNumber + "] = " + doubleArray[arrayNumber]);
 		}
 
 	}
