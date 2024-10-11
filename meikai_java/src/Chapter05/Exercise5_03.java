@@ -40,9 +40,13 @@ public class Exercise5_03 {
 		//正しくない
 		boolean judgeNotBigNumber = false;
 
+		//整数値の大小を比較する
 		if (firstNumber > secondNumber == judgeBigNumber) {
+			//一つ目が二つ目の整数値より大きいときの結果を表示する
 			System.out.println(judgeBigNumber);
+			//一つ目が二つ目の整数値より大きくない場合
 		} else {
+			///一つ目が二つ目の整数値より小さいもしくは等しいときの結果を表示する
 			System.out.println(judgeNotBigNumber);
 		}
 
