@@ -6,7 +6,7 @@ package Chapter05;
  * 作成者:M.Iizuka
  * 作成日:2024/10/11
  */
-public class Exercise5_7 {
+public class Exercise5_07 {
 
 	/*
 	 * 関数名:main
