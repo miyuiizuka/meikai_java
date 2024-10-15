@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /*
- * クラス名:Exercise6_09
+ * クラス名:Exercise6_10
  * 概要:要素型がint型である配列を作り、全要素を1～10の乱数で埋めつくすプログラム
  * ただし、連続する要素が同じ値を持つことのないようにする
  * 作成者:M.Iizuka
