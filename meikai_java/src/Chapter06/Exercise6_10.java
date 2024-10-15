@@ -60,8 +60,6 @@ public class Exercise6_10 {
 			do {
 				//要素に乱数を読み込む
 				integerArray[elementIndex] = randomNumber.nextInt(maxRandom) + adjustRandom;
-				//読み込まれた値を出力
-				System.out.println("integerArray[" + elementIndex + "] = " + integerArray[elementIndex]);
 				//前の要素と同じ値の場合は再度乱数を読み込む
 			} while (integerArray[elementIndex] == keyElement);
 			//比較対象を現在の要素に変更
