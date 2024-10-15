@@ -63,8 +63,9 @@ public class Exercise6_05 {
 			if (elementIndex != (inputSumElement - 1)) {
 				//カンマをつける
 				System.out.print(", ");
-				//最後の要素のときの憑依z
+				//最後の要素のときの表示
 			} else {
+				//カッコを閉じる
 				System.out.print("}");
 			}
 		}
