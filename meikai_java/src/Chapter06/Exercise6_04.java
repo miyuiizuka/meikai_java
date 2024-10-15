@@ -41,7 +41,7 @@ public class Exercise6_04 {
 			//入力値を読み込む
 			sumElement = standardInput.nextInt();
 			//不正であることを知らせる
-			if(sumElement<=0) {
+			if (sumElement <= 0) {
 				System.out.println("正の整数を入力してください。");
 			}
 			//正の整数値でなければ入力し直す
@@ -70,11 +70,9 @@ public class Exercise6_04 {
 					System.out.print("* ");
 				}
 			}
-			//空行
+			//要素の数値の1メモリごとに改行
 			System.out.println("");
 		}
-		//空行
-		System.out.println("");
 
 		//グラフの下線の記号の個数
 		int sumUnderLine = sumElement * 2 - 1;
@@ -82,7 +80,7 @@ public class Exercise6_04 {
 		for (int underLine = 0; underLine < sumUnderLine; underLine++) {
 			System.out.print("-");
 		}
-		//空行
+		//グラフとグラフ下のメモリの間で改行
 		System.out.println("");
 
 		//グラフの下にメモリを表示
@@ -90,7 +88,7 @@ public class Exercise6_04 {
 			//表示させるメモリ
 			int memoryNumber = indexNumber % 10;
 			//グラフの下にメモリを表示
-			System.out.print(memoryNumber+" ");
+			System.out.print(memoryNumber + " ");
 		}
 	}
 }
