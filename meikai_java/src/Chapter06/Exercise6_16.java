@@ -67,6 +67,7 @@ public class Exercise6_16 {
 		for (int lineIndex = 0; lineIndex < firstLine; lineIndex++) {
 			//行列の積の配列の列
 			for (int columnIndex = 0; columnIndex < secondColumn; columnIndex++) {
+				//各要素の積の和を代入するための変数
 				int sumElement = 0;
 				//行列の積の配列の列
 				for (int productIndex = 0; productIndex < secondLine; productIndex++) {
