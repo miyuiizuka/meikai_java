@@ -52,22 +52,29 @@ public class Exercise6_13 {
 			firstArray[elementIndex] = standardInput.nextInt();
 		}
 
-		//コピー先の配列を逆順に並べ替える
-		for (int elementIndex = 0; elementIndex < allElement / 2; elementIndex++) {
-			//ソートのための変数に先の要素を代入
-			int sortElement = firstArray[elementIndex];
-			//先の要素に後の要素を代入
-			firstArray[elementIndex] = firstArray[allElement - elementIndex - 1];
-			//後の要素に先の要素を代入
-			firstArray[allElement - elementIndex - 1] = sortElement;
-		}
-
 		//コピー元をコピー先に読み込む
 		for (int elementIndex = 0; elementIndex < allElement; elementIndex++) {
 			//配列をコピー
 			secondArray[elementIndex] = firstArray[elementIndex];
 		}
 
+		//コピー先の配列を逆順に並べ替える
+		for (int elementIndex = 0; elementIndex < allElement / 2; elementIndex++) {
+			//ソートのための変数に先の要素を代入
+			int sortElement = secondArray[elementIndex];
+			//先の要素に後の要素を代入
+			secondArray[elementIndex] = secondArray[allElement - elementIndex - 1];
+			//後の要素に先の要素を代入
+			secondArray[allElement - elementIndex - 1] = sortElement;
+		}
+
+		//コピー元の要素の値が変わっていないか確認する改行
+		System.out.println("");
+		//コピー元配列の要素の値を表示する
+		for (int elementIndex = 0; elementIndex < allElement; elementIndex++) {
+			//個々の要素の値を表示する
+			System.out.println("firstArray[" + elementIndex + "] = " + firstArray[elementIndex]);
+		}
 		//コピー先配列の要素の値を表示する
 		for (int elementIndex = 0; elementIndex < allElement; elementIndex++) {
 			//個々の要素の値を表示する
