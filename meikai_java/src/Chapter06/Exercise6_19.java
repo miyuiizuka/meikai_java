@@ -31,8 +31,6 @@ public class Exercise6_19 {
 		final int MINIMUM_SCORE = 0;
 		//点数の最大値
 		final int MAX_SCORE = 100;
-		//点数
-		int scoreValue = 0;
 
 		//クラス数を入力してもらう
 		do {
@@ -124,8 +122,9 @@ public class Exercise6_19 {
 		System.out.println("  組 |\t合計\t平均");
 		//見出しの下線の出力
 		System.out.println("---------------------");
-		//組、合計、平均を出力する
+		//各クラスの合計、平均を出力する
 		for (int classIndex = 0; classIndex < sumClass; classIndex++) {
+			//組、合計、平均の値を出力する
 			System.out.printf(" " + (classIndex + 1) + "組 |\t" + classSumScore[classIndex] + "\t\t%.1f",
 					classAverageScore[classIndex]);
 			//改行し次のクラスの点数出力
@@ -134,6 +133,6 @@ public class Exercise6_19 {
 		//下線を出力し全体の点数を出力
 		System.out.println("---------------------");
 		//全体の点数の出力
-		System.out.print("  計 |\t" + allScore + "\t\t" + allAverageScore);
+		System.out.printf("  計 |\t" + allScore + "\t\t" + "%.1f",allAverageScore);
 	}
 }
