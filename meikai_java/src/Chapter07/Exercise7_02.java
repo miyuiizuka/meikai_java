@@ -14,8 +14,8 @@ public class Exercise7_02 {
 	/*
 	 * 関数名:min
 	 * 概要:読み込んだ三つの整数の最小値を求める
-	 * 引数:入力された整数値
-	 * 戻り値:最小値
+	 * 引数:firstNumber,secondNumber,thirdNumber 入力された整数値
+	 * 戻り値:minimumNumber 最小値
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/17
 	 */

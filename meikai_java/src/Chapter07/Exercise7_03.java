@@ -14,8 +14,8 @@ public class Exercise7_03 {
 	/*
 	 * 関数名:med
 	 * 概要:読み込んだ三つの整数の中央値を求める
-	 * 引数:入力された整数値
-	 * 戻り値:中央値
+	 * 引数:firstNumber,secondNumber,thirdNumber 入力された整数値
+	 * 戻り値:medianNumber 中央値
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/17
 	 */
