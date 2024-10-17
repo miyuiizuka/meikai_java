@@ -26,23 +26,28 @@ public class Exercise7_01 {
 		final int ZERO_SIGN = 0;
 		//正の番号
 		final int POSITIVE_SIGN = 1;
+		//判別した番号
+		int signNumber = 0;
+
 		//負の場合
 		if (inputNumber < 0) {
-			//負の番号を返却
-			return NEGATIVE_SIGN;
+			//負の番号を判別番号にする
+			signNumber = NEGATIVE_SIGN;
 			//0の場合
 		} else if (inputNumber == 0) {
-			//0の番号を返却
-			return ZERO_SIGN;
+			//0の番号を判別番号にする
+			signNumber = ZERO_SIGN;
 			//正の場合
 		} else {
-			//正の番号を返却
-			return POSITIVE_SIGN;
+			//正の番号を判別番号にする
+			signNumber = POSITIVE_SIGN;
 		}
+		//判別した番号を返却する
+		return signNumber;
 	}
 
 	/*
-	 * 関数名:main
+	 * 関数名:main 
 	 * 概要:受け取ったint型の値が負であれば-1、0であれば0、正であれば1を返却する
 	 * 引数:なし
 	 * 戻り値:なし
