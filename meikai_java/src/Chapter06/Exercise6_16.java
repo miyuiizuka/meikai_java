@@ -89,7 +89,7 @@ public class Exercise6_16 {
 			//列の要素
 			for (int columnIndex = 0; columnIndex < firstColumn; columnIndex++) {
 				//要素の値を表示
-				System.out.printf("%3d",firstArray[lineIndex][columnIndex]);
+				System.out.printf("%d\t",firstArray[lineIndex][columnIndex]);
 			}
 			//1行の要素出力が終了したら改行
 			System.out.println();
@@ -101,7 +101,7 @@ public class Exercise6_16 {
 			//列の要素
 			for (int columnIndex = 0; columnIndex < secondColumn; columnIndex++) {
 				//要素の値を表示
-				System.out.printf("%3d",secondArray[lineIndex][columnIndex]);
+				System.out.printf("%d\t",secondArray[lineIndex][columnIndex]);
 			}
 			//1行の要素出力が終了したら改行
 			System.out.println();
@@ -113,7 +113,7 @@ public class Exercise6_16 {
 			//列の要素
 			for (int columnIndex = 0; columnIndex < secondColumn; columnIndex++) {
 				//要素の値を表示
-				System.out.printf("%3d",productArray[lineIndex][columnIndex]);
+				System.out.printf("%d\t",productArray[lineIndex][columnIndex]);
 			}
 			//1行の要素出力が終了したら改行
 			System.out.println();
