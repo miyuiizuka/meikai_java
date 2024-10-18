@@ -16,7 +16,8 @@ public class Exercise7_05 {
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/18
 	 */
-	public static void hello(String outputString) {
+	public static void hello() {
+		String outputString = "こんにちは。";
 		//文字を表示し改行する
 		System.out.println(outputString);
 	}
@@ -30,10 +31,8 @@ public class Exercise7_05 {
 	 * 作成日:2024/10/18
 	 */
 	public static void main(String[] args) {
-		//表示させたい文字
-		String outputString = "こんにちは。";
 		//表示させる
-		hello(outputString);
+		hello();
 
 	}
 
