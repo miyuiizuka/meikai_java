@@ -52,7 +52,7 @@ public class Exercise7_08 {
 	 * 関数名:checkInputNumber
 	 * 概要:入力値が正の整数であるか確認
 	 * 引数:inputNumber 入力値
-	 * 戻り値:check
+	 * 戻り値:retryInput 入力値チェックの結果
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/18
 	 */
