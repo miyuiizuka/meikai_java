@@ -11,7 +11,7 @@ public class Exercise7_05 {
 	/*
 	 * 関数名:hello
 	 * 概要:『こんにちは。』と表示して改行する
-	 * 引数:outputString 表示させたい文字
+	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/18
