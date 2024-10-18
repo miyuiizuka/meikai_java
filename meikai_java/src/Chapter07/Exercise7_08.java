@@ -32,44 +32,16 @@ public class Exercise7_08 {
 			randomNumber = inputMinimum;
 			//aの値がbより大きい場合
 		} else {
-			//a以上b未満の乱数を生成する
-			while (true) {
-				//b未満の乱数を生成する
-				randomNumber = extractRandom.nextInt(inputMax);
-				//生成された乱数がa以上の場合
-				if (randomNumber >= inputMinimum) {
-					//乱数生成を終了
-					break;
-				}
-			}
+			//調整値
+			int ajustInt = 1;
+			//最大値からランダムに引く数を決定
+			int randomMinus = extractRandom.nextInt(inputMax - inputMinimum) + ajustInt;
+			//乱数を生成する
+			randomNumber = inputMax - randomMinus;
 		}
 
 		//生成された乱数を返却
 		return randomNumber;
-	}
-
-	/*
-	 * 関数名:checkInputNumber
-	 * 概要:入力値が正の整数であるか確認
-	 * 引数:inputNumber 入力値
-	 * 戻り値:retryInput 入力値チェックの結果
-	 * 作成者:M.Iizuka
-	 * 作成日:2024/10/18
-	 */
-	public static boolean checkInputNumber(int inputNumber) {
-		//入力値チェックの変数
-		boolean retryInput = true;
-		//入力値が正の整数でない場合
-		if (inputNumber <= 0) {
-			//正の整数を入力するよう表示
-			System.out.println("正の整数値を入力してください。");
-			//入力値が正の整数の場合
-		} else {
-			//falseを返却
-			retryInput = false;
-		}
-		//結果を返却
-		return retryInput;
 	}
 
 	/*
@@ -83,28 +55,14 @@ public class Exercise7_08 {
 	public static void main(String[] args) {
 		//入力値を抽出する
 		Scanner standardInput = new Scanner(System.in);
-		//生成する乱数の最小値
-		int inputMinimum = 0;
-		//生成する乱数の最大値
-		int inputMax = 0;
-		//乱数の最小値の入力
-		do {
-			//生成する乱数の最小値の入力を促す
-			System.out.print("整数a：");
-			//入力値を読み込む
-			inputMinimum = standardInput.nextInt();
-			//正しい入力値になるまで繰り返す
-		} while (checkInputNumber(inputMinimum));
-		//生成する乱数の最大値の入力を促す
-
-		//乱数の最大値の入力
-		do {
-			//生成する乱数の最大値の入力を促す					
-			System.out.print("整数b：");
-			//入力値を読み込む
-			inputMax = standardInput.nextInt();
-			//正しい入力値になるまで繰り返す
-		} while (checkInputNumber(inputMax));
+		//生成する乱数の最小値の入力を促す
+		System.out.print("整数a：");
+		//入力値を読み込む
+		int inputMinimum = standardInput.nextInt();
+		//生成する乱数の最大値の入力を促す					
+		System.out.print("整数b：");
+		//入力値を読み込む
+		int inputMax = standardInput.nextInt();
 
 		//生成された値を表示する
 		System.out.println(random(inputMinimum, inputMax));
