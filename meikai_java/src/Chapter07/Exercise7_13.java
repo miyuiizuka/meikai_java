@@ -10,6 +10,8 @@ import java.util.Scanner;
  * 作成日:2024/10/21
  */
 public class Exercise7_13 {
+	//int型のビット数
+	static final int INT_MOST_SIGNIFICANT_BITS = 31;
 
 	/*
 	 * 関数名:printBits
@@ -20,8 +22,6 @@ public class Exercise7_13 {
 	 * 作成日:2024/10/21
 	 */
 	public static void printBits(int inputInt) {
-		//int型のビット数
-		final int INT_MOST_SIGNIFICANT_BITS = 31;
 		//ビット構成を調べる
 		for (int bitIndex = INT_MOST_SIGNIFICANT_BITS; bitIndex >= 0; bitIndex--) {
 			//ビット構成を表示
@@ -138,10 +138,18 @@ public class Exercise7_13 {
 		System.out.print("整数：");
 		//入力値を読み込む
 		int inputInt = standardInput.nextInt();
-		//回転させるビット数の入力を促す
-		System.out.print("何ビット目：");
-		//入力値を読み込む
-		int posBit = standardInput.nextInt();
+		//回転させるビット数
+		int posBit = 0;
+		do {//回転させるビット数の入力を促す
+			System.out.print("何ビット目：");
+			//入力値を読み込む
+			posBit = standardInput.nextInt();
+			//最上位ビット数を超えたら
+			if (posBit > INT_MOST_SIGNIFICANT_BITS) {
+				//不正解であることを表示
+				System.out.println(INT_MOST_SIGNIFICANT_BITS + "以下で入力してください。");
+			}
+		} while (posBit > INT_MOST_SIGNIFICANT_BITS);
 
 		//入力された整数のビット構成を表示する
 		System.out.println("\n整数" + inputInt + "のビット構成");
