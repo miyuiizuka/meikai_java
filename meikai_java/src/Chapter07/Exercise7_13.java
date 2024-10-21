@@ -140,7 +140,9 @@ public class Exercise7_13 {
 		int inputInt = standardInput.nextInt();
 		//回転させるビット数
 		int posBit = 0;
-		do {//回転させるビット数の入力を促す
+		//回転させるビット数を入力してもらう
+		do {
+			//回転させるビット数の入力を促す
 			System.out.print("何ビット目：");
 			//入力値を読み込む
 			posBit = standardInput.nextInt();
