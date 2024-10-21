@@ -21,8 +21,10 @@ public class Exercise7_11 {
 	 * 作成日:2024/10/21
 	 */
 	public static void printBits(int inputInt) {
+		//int型のビット数
+		final int INT_MOST_SIGNIFICANT_BITS=31;
 		//ビット構成を調べる
-		for (int bitIndex = 31; bitIndex >= 0; bitIndex--) {
+		for (int bitIndex = INT_MOST_SIGNIFICANT_BITS; bitIndex >= 0; bitIndex--) {
 			//ビット構成を表示
 			System.out.print(((inputInt >>> bitIndex & 1) == 1) ? '1' : '0');
 		}

@@ -10,6 +10,8 @@ import java.util.Scanner;
  * 作成日:2024/10/21
  */
 public class Exercise7_12 {
+	//int型のビット数
+	static final int INT_MOST_SIGNIFICANT_BITS = 31;
 
 	/*
 	 * 関数名:printBits
@@ -20,8 +22,9 @@ public class Exercise7_12 {
 	 * 作成日:2024/10/21
 	 */
 	public static void printBits(int inputInt) {
+
 		//ビット構成を調べる
-		for (int bitIndex = 31; bitIndex >= 0; bitIndex--) {
+		for (int bitIndex = INT_MOST_SIGNIFICANT_BITS; bitIndex >= 0; bitIndex--) {
 			//ビット構成を表示
 			System.out.print(((inputInt >>> bitIndex & 1) == 1) ? '1' : '0');
 		}
@@ -39,7 +42,7 @@ public class Exercise7_12 {
 		//ビット回転後の値
 		int rRotateInt = 0;
 		//回転後のビット構成を求める
-		for (int bitIndex = 31; bitIndex >= 0; bitIndex--) {
+		for (int bitIndex = INT_MOST_SIGNIFICANT_BITS; bitIndex >= 0; bitIndex--) {
 			//回転後の二進数の値
 			int binaryInt = ((inputInt >>> (bitIndex + rotateBits) & 1) == 1) ? 1 : 0;
 			//べき乗の底
@@ -76,7 +79,7 @@ public class Exercise7_12 {
 		rotateBits = 32 - rotateBits;
 
 		//回転後のビット構成を求める
-		for (int bitIndex = 31; bitIndex >= 0; bitIndex--) {
+		for (int bitIndex = INT_MOST_SIGNIFICANT_BITS; bitIndex >= 0; bitIndex--) {
 			//回転後の二進数の値
 			int binaryInt = ((inputInt >>> (bitIndex + rotateBits) & 1) == 1) ? 1 : 0;
 			//べき乗の底
