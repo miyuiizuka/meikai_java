@@ -23,7 +23,7 @@ public class Exercise7_06 {
 		//1月の定数
 		final int JANUARY_NUMBER = 1;
 		//2月の定数
-		final int FEBRARY_NUMBER = 2;
+		final int FEBRUARY_NUMBER = 2;
 		//3月の定数
 		final int MARCH_NUMBER = 3;
 		//4月の定数
@@ -91,7 +91,7 @@ public class Exercise7_06 {
 			//1月
 		case JANUARY_NUMBER:
 			//2月
-		case FEBRARY_NUMBER:
+		case FEBRUARY_NUMBER:
 			//季節を出力
 			System.out.println(WINTER_STRING);
 			//switch文を抜ける
