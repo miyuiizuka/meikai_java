@@ -44,8 +44,9 @@ public class Exercise7_11 {
 		final int BASE_INT = 2;
 		//べき乗した結果
 		int powerInt = 1;
-		//べき乗後の値
+		//べき乗後の値を求める
 		for (int exponentIndex = 0; exponentIndex < shiftBits; exponentIndex++) {
+			//べき乗後の値
 			powerInt *= BASE_INT;
 		}
 
