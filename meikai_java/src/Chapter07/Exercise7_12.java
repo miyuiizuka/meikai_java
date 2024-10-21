@@ -12,6 +12,22 @@ import java.util.Scanner;
 public class Exercise7_12 {
 
 	/*
+	 * 関数名:printBits
+	 * 概要:int型のビット構成を表示
+	 * 引数:inputInt 入力された整数
+	 * 戻り値:なし
+	 * 作成者:M.Iizuka
+	 * 作成日:2024/10/21
+	 */
+	public static void printBits(int inputInt) {
+		//ビット構成を調べる
+		for (int bitIndex = 31; bitIndex >= 0; bitIndex--) {
+			//ビット構成を表示
+			System.out.print(((inputInt >>> bitIndex & 1) == 1) ? '1' : '0');
+		}
+	}
+
+	/*
 	 * 関数名:rRotate
 	 * 概要:整数を右に指定分ビット回転した値を返す
 	 * 引数:inputInt 入力された整数. rotateBits 回転させるビット数
@@ -100,10 +116,23 @@ public class Exercise7_12 {
 		System.out.print("ビット数：");
 		//入力値を読み込む
 		int rotateBits = standardInput.nextInt();
+
+		//入力された整数のビット構成を表示する
+		System.out.println("\n整数" + inputInt + "のビット構成");
+		//入力された整数のビット構成を表示
+		printBits(inputInt);
 		//右に回転した値を表示
-		System.out.println("右に" + rotateBits + "ビット回転した値：" + rRotate(inputInt, rotateBits));
+		System.out.println("\n右に" + rotateBits + "ビット回転した値");
+		//右に回転した値を求める
+		int rRotateInt = rRotate(inputInt, rotateBits);
+		//右に回転した値のビット構成を表示
+		printBits(rRotateInt);
 		//左に回転した値を表示
-		System.out.println("左に" + rotateBits + "ビット回転した値：" + lRotate(inputInt, rotateBits));
+		System.out.println("\n左に" + rotateBits + "ビット回転した値");
+		//左に回転した値を求める
+		int lRotateInt = lRotate(inputInt, rotateBits);
+		//右に回転した値のビット構成を表示
+		printBits(lRotateInt);
 	}
 
 }
