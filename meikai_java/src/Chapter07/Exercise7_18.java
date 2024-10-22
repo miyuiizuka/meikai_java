@@ -20,15 +20,20 @@ public class Exercise7_18 {
 	 * 作成日:2024/10/22
 	 */
 	public static void printArray(int[] optionalArray) {
-		//配列の要素を表示する最初の"{"を表示する
+		//配列の要素を表示する最初のカッコを表示する
 		System.out.print("{");
-		//配列の全要素を走査
-		for (int arrayElement : optionalArray) {
-			//全要素を表示する
-			System.out.print(+arrayElement + ",");
+		//配列の全要素を表示する
+		for (int elementIndex=0;elementIndex<optionalArray.length ; elementIndex++) {
+			//最後の要素
+			if(elementIndex==(optionalArray.length-1)) {
+			//カンマをつけないで表示しカッコを閉じる
+			System.out.print(+optionalArray[elementIndex]+"}");
+			//最後の要素以外
+			}else {
+			//カンマをつけて表示する
+			System.out.print(+optionalArray[elementIndex] + ",");
+			}
 		}
-		//配列の要素を表示する最後の"}"を表示する
-		System.out.println("}");
 	}
 
 	/*
@@ -104,12 +109,12 @@ public class Exercise7_18 {
 			//入力値を読み込む
 			removeElement = standardInput.nextInt();
 			//不正な値の場合
-			if (removeElement < 0 || removeElement >= integerArray.length) {
+			if (removeElement < 0 || removeElement >= integerArray.length-1) {
 				//正しい値を入力するよう促す
 				System.out.println("0以上" + (integerArray.length - 2) + "以下の値を入力してください。");
 			}
 			//不正な値の場合は入力処理を繰り返す
-		} while (removeElement < 0 || removeElement >= integerArray.length);
+		} while (removeElement < 0 || removeElement >= integerArray.length-1);
 
 		//削除後の配列の要素を表示する
 		System.out.println("\n削除後の配列");
