@@ -56,6 +56,7 @@ public class Exercise7_16 {
 			allElement = standardInput.nextInt();
 			//不正な値が入力された場合
 			if (allElement <= 0) {
+				//正しい値を入力するよう促す
 				System.out.println("正の整数で入力してください。");
 			}
 			//不正な値であれば入力処理を繰り返す
