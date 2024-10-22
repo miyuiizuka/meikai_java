@@ -4,36 +4,39 @@ package Chapter07;
 import java.util.Scanner;
 
 /*
- * クラス名:Exercise7_15
- * 概要:配列integerArrayの全要素の合計を求めて表示する
+ * クラス名:Exercise7_16
+ * 概要:配列integerArrayの最小値を求めて表示する
  * 作成者:M.Iizuka
  * 作成日:2024/10/22
  */
-public class Exercise7_15 {
+public class Exercise7_16 {
 
 	/*
-	 * 関数名:sumOf
-	 * 概要:配列の全要素の合計を求める
+	 * 関数名:minOf
+	 * 概要:配列の要素の最小値を求める
 	 * 引数:optionalArray 任意の配列
-	 * 戻り値:全要素の合計値
+	 * 戻り値:配列の要素の最小値
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/22
 	 */
-	public static int sumOf(int[] optionalArray) {
-		//全要素の合計値
-		int sumElement = 0;
-		//全要素の合計を求める
-		for (int arrayElement : optionalArray) {
-			//現在の要素を合計に足す
-			sumElement += arrayElement;
+	public static int minOf(int[] optionalArray) {
+		//配列の要素の最小値
+		int minimumElement = optionalArray[0];
+		//配列の要素の最小値を求める
+		for (int elementIndex = 1; elementIndex < optionalArray.length; elementIndex++) {
+			//前の要素より小さい場合
+			if (optionalArray[elementIndex] < minimumElement) {
+				//今の要素を最小値に設定
+				minimumElement = optionalArray[elementIndex];
+			}
 		}
-		//全要素の合計値を返す
-		return sumElement;
+		//配列の要素の最小値を返す
+		return minimumElement;
 	}
 
 	/*
 	 * 関数名:main
-	 * 概要:配列integerArrayの全要素の合計を求めて表示する
+	 * 概要:配列integerArrayの要素の最小値を求めて表示する
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:M.Iizuka
@@ -53,7 +56,6 @@ public class Exercise7_15 {
 			allElement = standardInput.nextInt();
 			//不正な値が入力された場合
 			if (allElement <= 0) {
-				//正しい値を入力するよう促す
 				System.out.println("正の整数で入力してください。");
 			}
 			//不正な値であれば入力処理を繰り返す
@@ -69,7 +71,8 @@ public class Exercise7_15 {
 			integerArray[elementIndex] = standardInput.nextInt();
 		}
 
-		//配列の全要素の合計を表示する
-		System.out.println("\n全要素の合計は" + sumOf(integerArray) + "です。");
+		//配列の要素の最小値を表示する
+		System.out.println("\n最小値は" + minOf(integerArray) + "です。");
 	}
+
 }
