@@ -139,6 +139,7 @@ public class Exercise7_21 {
 		System.out.println("\n全要素の値を交換します。");
 		//全要素の値を交換
 		aryExchng(firstArray, secondArray);
+		//一つ目の配列を表示
 		printArray(firstArray, "firstArray");
 		//二つ目の配列を表示
 		printArray(secondArray, "secondArray");
