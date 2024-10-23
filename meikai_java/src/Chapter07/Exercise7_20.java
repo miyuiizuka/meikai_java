@@ -83,6 +83,14 @@ public class Exercise7_20 {
 		printArray(optionalArray);
 	}
 
+	/*
+	 * 関数名:main
+	 * 概要:配列の指定した要素に値を挿入し表示する
+	 * 引数:なし
+	 * 戻り値:なし
+	 * 作成者:M.Iizuka
+	 * 作成日:2024/10/23
+	 */
 	public static void main(String[] args) {
 		//入力値を抽出する
 		Scanner standardInput = new Scanner(System.in);
