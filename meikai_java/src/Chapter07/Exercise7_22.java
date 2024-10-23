@@ -97,7 +97,7 @@ public class Exercise7_22 {
 		//同じ配列を生成する
 		int[] cloneArray = arrayClone(integerArray);
 		//最初の配列を表示する
-		printArray(cloneArray, "integerArray");
+		printArray(integerArray, "integerArray");
 		//生成した同じ配列を表示する
 		printArray(cloneArray, "cloneArray");
 	}
