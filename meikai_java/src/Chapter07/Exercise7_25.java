@@ -96,14 +96,16 @@ public class Exercise7_25 {
 		for (int elementIndex = 0; elementIndex < optionalArray.length; elementIndex++) {
 			//最後の要素
 			if (elementIndex == (optionalArray.length - 1)) {
-				//カンマをつけないで表示しカッコを閉じる
-				System.out.print(+optionalArray[elementIndex] + "}");
+				//カンマをつけないで表示する
+				System.out.print(+optionalArray[elementIndex]);
 				//最後の要素以外
 			} else {
 				//カンマをつけて表示する
 				System.out.print(+optionalArray[elementIndex] + ",");
 			}
 		}
+		//配列の要素を表示する最後のカッコを表示する
+		System.out.print("}");
 	}
 
 	/*
