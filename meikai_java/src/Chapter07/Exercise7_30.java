@@ -127,7 +127,7 @@ public class Exercise7_30 {
 		//配列の要素の値を入力してもらう
 		for (int elementIndex = 0; elementIndex < allElement; elementIndex++) {
 			//要素の値の入力を促す
-			System.out.print("integerArray[" + elementIndex + "]：");
+			System.out.print("optionalArray[" + elementIndex + "]：");
 			//入力値を配列に格納
 			optionalArray[elementIndex] = standardInput.nextInt();
 		}
@@ -138,7 +138,8 @@ public class Exercise7_30 {
 		System.out.println(firstValue + "と" + secondValue + "の最小値は" + min(firstValue, secondValue) + "です。");
 		//三つの整数の最小値を表示する
 		System.out
-				.println((firstValue + "と" + secondValue + "の最小値は" + min(firstValue, secondValue, thirdValue) + "です。"));
+				.println((firstValue + "と" + secondValue + "と" + thirdValue + "の最小値は"
+						+ min(firstValue, secondValue, thirdValue) + "です。"));
 		//配列の要素の最小値を表示する
 		System.out.println("optionalArrayの最小値は" + min(optionalArray) + "です。");
 	}
