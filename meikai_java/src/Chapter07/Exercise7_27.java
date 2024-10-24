@@ -18,6 +18,8 @@ public class Exercise7_27 {
 	static int secondArrayColumn = 0;
 	//三つ目の列数
 	static int thirdArrayColumn = 0;
+	//加算した配列
+	static int[][] addMatrixArray;
 
 	/*
 	 * 関数名:createArray
@@ -118,8 +120,11 @@ public class Exercise7_27 {
 				System.out.print("[" + lineIndex + "][" + columnIndex + "] = ");
 				//入力値を読み込む
 				optionalArray[lineIndex][columnIndex] = standardInput.nextInt();
-				//列の数をカウント
-				columnValue++;
+				//一列の要素数を数える
+				if (lineIndex == 0) {
+					//一列の数をカウント
+					columnValue++;
+				}
 			}
 		}
 		//列の数を返す
@@ -156,7 +161,7 @@ public class Exercise7_27 {
 	 */
 	public static boolean addMatrix(int[][] firstArray, int[][] secondArray, int[][] thirdArray) {
 		//加算した値を格納する配列
-		int[][] addMatrixArray = new int[firstArray.length][firstArrayColumn];
+		addMatrixArray = new int[firstArray.length][firstArrayColumn];
 		//三つの配列の要素数が等しく、加算を行ったか
 		boolean addMatrix = false;
 		//三つの行数が等しいか調べる
@@ -165,8 +170,6 @@ public class Exercise7_27 {
 		boolean equalColumnValue = checkEqualValue(firstArrayColumn, secondArrayColumn, thirdArrayColumn);
 		//三つの配列の要素数が等しい場合
 		if (equalLineValue && equalColumnValue) {
-			//加算を行うことを表示
-			System.out.println("\n加算を行います。");
 			//三つの配列の加算を行う
 			for (int lineIndex = 0; lineIndex < firstArray.length; lineIndex++) {
 				//列の要素を加算する
@@ -176,10 +179,6 @@ public class Exercise7_27 {
 							+ secondArray[lineIndex][columnIndex]);
 					//二つの加算結果に三つ目の配列の加算
 					addMatrixArray[lineIndex][columnIndex] += thirdArray[lineIndex][columnIndex];
-					//加算結果を表示する
-					System.out.print(
-							"[" + lineIndex + "][" + columnIndex + "] = " + addMatrixArray[lineIndex][columnIndex]
-									+ "\t");
 				}
 				//次の行の計算へ改行する
 				System.out.println("");
@@ -189,6 +188,27 @@ public class Exercise7_27 {
 		}
 		//要素数が等しく、加算を行ったか返す
 		return addMatrix;
+	}
+
+	/*
+	 * 関数名:printArray
+	 * 概要:配列の要素を表示する
+	 * 引数:optionalArray 任意の配列
+	 * 戻り値:なし
+	 * 作成者:M.Iizuka
+	 * 作成日:2024/10/22
+	 */
+	public static void printArray(int[][] optionalArray) {
+		//配列の要素を表示する
+		for (int linIndex = 0; linIndex < optionalArray.length; linIndex++) {
+			//列の要素の値を表示する
+			for (int columnIndex = 0; columnIndex < optionalArray[linIndex].length; columnIndex++) {
+				//要素の値を表示
+				System.out.print(optionalArray[linIndex][columnIndex] + "  ");
+			}
+			//次の行の表示へ改行
+			System.out.println("");
+		}
 	}
 
 	/*
@@ -223,5 +243,22 @@ public class Exercise7_27 {
 		boolean addMatrix = addMatrix(firstArray, secondArray, thirdArray);
 		//boolean値を表示
 		System.out.println(addMatrix);
+
+		//配列１を表示
+		System.out.println("配列１");
+		//配列１の要素を表示
+		printArray(firstArray);
+		//配列２を表示
+		System.out.println("配列２");
+		//配列２の要素を表示
+		printArray(secondArray);
+		//配列３を表示
+		System.out.println("配列３");
+		//配列３の要素を表示
+		printArray(thirdArray);
+		//加算した配列を表示
+		System.out.println("加算した結果");
+		//加算した配列の要素を表示
+		printArray(addMatrixArray);
 	}
 }
