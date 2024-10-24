@@ -77,7 +77,7 @@ public class Exercise7_27 {
 	 * 関数名:checkPositiveInt
 	 * 概要:正の整数であるかをチェック
 	 * 引数:inputInt 入力された整数
-	 * 戻り値:notPositive
+	 * 戻り値:notPositive 正の整数であるか
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/23
 	 */
@@ -155,6 +155,8 @@ public class Exercise7_27 {
 	 * 作成日:2024/10/23
 	 */
 	public static boolean addMatrix(int[][] firstArray, int[][] secondArray, int[][] thirdArray) {
+		//加算した値を格納する配列
+		int[][] addMatrixArray = new int[firstArray.length][firstArrayColumn];
 		//三つの配列の要素数が等しく、加算を行ったか
 		boolean addMatrix = false;
 		//三つの行数が等しいか調べる
@@ -169,12 +171,15 @@ public class Exercise7_27 {
 			for (int lineIndex = 0; lineIndex < firstArray.length; lineIndex++) {
 				//列の要素を加算する
 				for (int columnIndex = 0; columnIndex < firstArray[lineIndex].length; columnIndex++) {
-					//三つの配列の列の要素の加算を行う
-					thirdArray[lineIndex][columnIndex] += (firstArray[lineIndex][columnIndex]
+					//二つの加算結果を配列に入れる
+					addMatrixArray[lineIndex][columnIndex] += (firstArray[lineIndex][columnIndex]
 							+ secondArray[lineIndex][columnIndex]);
+					//二つの加算結果に三つ目の配列の加算
+					addMatrixArray[lineIndex][columnIndex] += thirdArray[lineIndex][columnIndex];
 					//加算結果を表示する
 					System.out.print(
-							"[" + lineIndex + "][" + columnIndex + "] = " + thirdArray[lineIndex][columnIndex] + "\t");
+							"[" + lineIndex + "][" + columnIndex + "] = " + addMatrixArray[lineIndex][columnIndex]
+									+ "\t");
 				}
 				//次の行の計算へ改行する
 				System.out.println("");
