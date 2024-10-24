@@ -12,6 +12,10 @@ import java.util.Scanner;
 public class Exercise7_27 {
 	//入力値を抽出する
 	static Scanner standardInput = new Scanner(System.in);
+	//行の要素数
+	static int lineValue = 0;
+	//列の要素数
+	static int columnValue = 0;
 	//一つ目の列数
 	static int firstArrayColumn = 0;
 	//二つ目の列数
@@ -21,17 +25,13 @@ public class Exercise7_27 {
 
 	/*
 	 * 関数名:createArray
-	 * 概要:配列を作る
+	 * 概要:配列の生成
 	 * 引数:なし
 	 * 戻り値:newArray 生成された配列
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/23
 	 */
 	public static int[][] createArray() {
-		//行の要素数
-		int lineValue = 0;
-		//列の要素数
-		int columnValue = 0;
 		//行の要素数の入力
 		do {
 			//要素数の入力
@@ -105,9 +105,7 @@ public class Exercise7_27 {
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/23
 	 */
-	public static int inputElementValue(int[][] optionalArray) {
-		//列の数
-		int columnValue = 0;
+	public static void inputElementValue(int[][] optionalArray) {
 		//各要素の値を入力してもらうことを表示
 		System.out.println("各要素の値を入力してください。");
 		//各行の値を入力してしもらう
@@ -118,15 +116,8 @@ public class Exercise7_27 {
 				System.out.print("[" + lineIndex + "][" + columnIndex + "] = ");
 				//入力値を読み込む
 				optionalArray[lineIndex][columnIndex] = standardInput.nextInt();
-				//一列の要素数を数える
-				if (lineIndex == 0) {
-					//一列の数をカウント
-					columnValue++;
-				}
 			}
 		}
-		//列の数を返す
-		return columnValue;
 	}
 
 	/*
@@ -161,7 +152,7 @@ public class Exercise7_27 {
 		//三つの配列の要素数が等しく、加算を行ったか
 		boolean addMatrix = false;
 		//三つの行数が等しいか調べる
-		boolean equalLineValue = checkEqualValue(firstArray.length, secondArray.length, firstArray.length);
+		boolean equalLineValue = checkEqualValue(firstArray.length, secondArray.length, thirdArray.length);
 		//三つの列数が等しいか調べる
 		boolean equalColumnValue = checkEqualValue(firstArrayColumn, secondArrayColumn, thirdArrayColumn);
 		//三つの配列の要素数が等しい場合
@@ -218,18 +209,25 @@ public class Exercise7_27 {
 		System.out.println("行列a");
 		//一つ目の配列を生成
 		int[][] firstArray = createArray();
-		//一つ目の配列の要素の値を入力し列の数を取得
-		firstArrayColumn = inputElementValue(firstArray);
+		//一つ目の列数を取得
+		firstArrayColumn = columnValue;
+		//一つ目の配列の要素の値を入力
+		inputElementValue(firstArray);
 		//二つ目の配列の生成を行っていくことを表示
 		System.out.println("\n行列b");
 		//二つ目の配列を生成
 		int[][] secondArray = createArray();
-		//二つ目の配列の要素の値を入力し列の数を取得
-		secondArrayColumn = inputElementValue(secondArray);
+		//二つ目の列数を取得
+		secondArrayColumn = columnValue;
+		//二つ目の配列の要素の値を入力
+		inputElementValue(secondArray);
 		//三つ目の配列の生成を行っていくことを表示
 		System.out.println("\n行列c");
 		//三つ目の配列を生成
 		int[][] thirdArray = createArray();
+		//三つ目の列数を取得
+		//一つ目の列数を取得
+		thirdArrayColumn = columnValue;
 
 		//三つの配列の要素数が等しければ加算、等しくなければ加算を行わない
 		boolean addMatrix = addMatrix(firstArray, secondArray, thirdArray);
