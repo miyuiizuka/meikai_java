@@ -103,7 +103,7 @@ public class Exercise7_27 {
 	 * 関数名:inputElementValue
 	 * 概要:要素の値を入力する
 	 * 引数:optionalArray 要素を入力する配列
-	 * 戻り値:columnValue
+	 * 戻り値:columnValue 列の数
 	 * 作成者:M.Iizuka
 	 * 作成日:2024/10/23
 	 */
@@ -204,7 +204,7 @@ public class Exercise7_27 {
 			//列の要素の値を表示する
 			for (int columnIndex = 0; columnIndex < optionalArray[linIndex].length; columnIndex++) {
 				//要素の値を表示
-				System.out.print(optionalArray[linIndex][columnIndex] + "  ");
+				System.out.print(optionalArray[linIndex][columnIndex] + "\t");
 			}
 			//次の行の表示へ改行
 			System.out.println("");

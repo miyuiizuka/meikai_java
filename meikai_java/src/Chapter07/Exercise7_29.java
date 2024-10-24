@@ -4,12 +4,12 @@ package Chapter07;
 import java.util.Scanner;
 
 /*
- * クラス名:Exercise7_28
- * 概要:二つの行列の和を格納した2次元配列を表示する
+ * クラス名:Exercise7_29
+ * 概要:任意の二次元配列と同じ配列（要素数、全要素の値それぞれが同じ配列）を生成して表示する
  * 作成者:M.Iizuka
  * 作成日:2024/10/24
  */
-public class Exercise7_28 {
+public class Exercise7_29 {
 	//入力値を抽出する
 	static Scanner standardInput = new Scanner(System.in);
 	//行の数
@@ -67,6 +67,8 @@ public class Exercise7_28 {
 	 * 作成日:2024/10/23
 	 */
 	public static void inputElementValue(int[][] optionalArray) {
+		//各要素の値を入力してもらうことを表示
+		System.out.println("各要素の値を入力してください。");
 		//各行の値を入力してしもらう
 		for (int lineIndex = 0; lineIndex < optionalArray.length; lineIndex++) {
 			//各要素の値を入力してもらう
@@ -77,32 +79,6 @@ public class Exercise7_28 {
 				optionalArray[lineIndex][columnIndex] = standardInput.nextInt();
 			}
 		}
-	}
-
-	/*
-	 * 関数名:addMatrix
-	 * 概要:二つの行列の和を求める
-	 * 引数:firstArray 一つ目の配列, secondArray 二つ目の配列
-	 * 戻り値:addMatrixArray 二つの行列の和を格納した二次元配列
-	 * 作成者:M.Iizuka
-	 * 作成日:2024/10/24
-	 */
-	public static int[][] addMatrix(int[][] firstArray, int[][] secondArray) {
-		//返す配列
-		int[][] addMatrixArray = new int[lineValue][columnValue];
-		//行列の加算を行う
-		for (int lineIndex = 0; lineIndex < lineValue; lineIndex++) {
-			//列の要素を加算する
-			for (int columnIndex = 0; columnIndex < columnValue; columnIndex++) {
-				//三つの配列の列の要素の加算を行う
-				addMatrixArray[lineIndex][columnIndex] += (firstArray[lineIndex][columnIndex]
-						+ secondArray[lineIndex][columnIndex]);
-			}
-			//次の行の計算へ改行する
-			System.out.println("");
-		}
-		//加算した値を格納した配列を返す
-		return addMatrixArray;
 	}
 
 	/*
@@ -128,7 +104,7 @@ public class Exercise7_28 {
 
 	/*
 	 * 関数名:main
-	 * 概要:二つの行列の和を格納した2次元配列を表示する
+	 * 概要:任意の二次元配列と同じ配列（要素数、全要素の値それぞれが同じ配列）を生成して表示する
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:M.Iizuka
@@ -150,34 +126,42 @@ public class Exercise7_28 {
 		} while (checkPositiveInt(columnValue));
 
 		//配列を生成
-		int[][] firstArray = new int[lineValue][columnValue];
-		//一つ目の配列の生成を行っていくことを表示
-		System.out.println("\n配列１の要素の値を入力してください。");
-		//一つ目の配列の要素の値を入力
-		inputElementValue(firstArray);
+		int[][] originalArray = new int[lineValue][columnValue];
+		//配列の要素の値を入力
+		inputElementValue(originalArray);
 
-		//配列を生成
-		int[][] secondArray = new int[lineValue][columnValue];
-		//二つ目の配列の生成を行っていくことを表示
-		System.out.println("\n配列２の要素の値を入力してください。");
-		//二つ目の配列の要素の値を入力
-		inputElementValue(secondArray);
-
-		//二つの行列の和の配列
-		int[][] addMatrixArray = addMatrix(firstArray, secondArray);
-		//配列１を表示
-		System.out.println("配列１");
-		//配列１の要素を表示
-		printArray(firstArray);
-		//配列２を表示
-		System.out.println("配列２");
-		//配列２の要素を表示
-		printArray(secondArray);
-		//加算した配列を表示
-		System.out.println("加算した配列");
-		//行列の和の配列を表示
-		printArray(addMatrixArray);
-
+		//同じ配列を複製する
+		int[][] cloneArray = aryClone2(originalArray);
+		//複製元の配列を表示
+		System.out.println("複製元の配列");
+		//複製元の配列の要素を表示
+		printArray(originalArray);
+		//複製した配列を表示
+		System.out.println("複製した配列");
+		//複製した配列の要素を表示
+		printArray(cloneArray);
 	}
 
+	/*
+	 * 関数名:aryClone2
+	 * 概要:任意の配列と同じ配列を複製する
+	 * 引数:originalArray 複製元の配列
+	 * 戻り値:cloneArray 複製した配列
+	 * 作成者:M.Iizuka
+	 * 作成日:024/10/24
+	 */
+	public static int[][] aryClone2(int[][] originalArray) {
+		//任意の配列と同じ要素数の配列を生成
+		int[][] cloneArray = new int[lineValue][columnValue];
+		//配列を複製する
+		for (int lineIndex = 0; lineIndex < lineValue; lineIndex++) {
+			//列の要素の値を表示する
+			for (int columnIndex = 0; columnIndex < columnValue; columnIndex++) {
+				//要素をコピー
+				cloneArray[lineIndex][columnIndex] = originalArray[lineIndex][columnIndex];
+			}
+		}
+		//複製した配列を返却
+		return cloneArray;
+	}
 }
