@@ -18,8 +18,6 @@ public class Exercise7_27 {
 	static int secondArrayColumn = 0;
 	//三つ目の列数
 	static int thirdArrayColumn = 0;
-	//加算した配列
-	static int[][] addMatrixArray;
 
 	/*
 	 * 関数名:createArray
@@ -160,8 +158,6 @@ public class Exercise7_27 {
 	 * 作成日:2024/10/23
 	 */
 	public static boolean addMatrix(int[][] firstArray, int[][] secondArray, int[][] thirdArray) {
-		//加算した値を格納する配列
-		addMatrixArray = new int[firstArray.length][firstArrayColumn];
 		//三つの配列の要素数が等しく、加算を行ったか
 		boolean addMatrix = false;
 		//三つの行数が等しいか調べる
@@ -175,10 +171,8 @@ public class Exercise7_27 {
 				//列の要素を加算する
 				for (int columnIndex = 0; columnIndex < firstArray[lineIndex].length; columnIndex++) {
 					//二つの加算結果を配列に入れる
-					addMatrixArray[lineIndex][columnIndex] += (firstArray[lineIndex][columnIndex]
+					thirdArray[lineIndex][columnIndex] += (firstArray[lineIndex][columnIndex]
 							+ secondArray[lineIndex][columnIndex]);
-					//二つの加算結果に三つ目の配列の加算
-					addMatrixArray[lineIndex][columnIndex] += thirdArray[lineIndex][columnIndex];
 				}
 				//次の行の計算へ改行する
 				System.out.println("");
@@ -221,44 +215,38 @@ public class Exercise7_27 {
 	 */
 	public static void main(String[] args) {
 		//一つ目の配列の生成を行っていくことを表示
-		System.out.println("配列１");
+		System.out.println("行列a");
 		//一つ目の配列を生成
 		int[][] firstArray = createArray();
 		//一つ目の配列の要素の値を入力し列の数を取得
 		firstArrayColumn = inputElementValue(firstArray);
 		//二つ目の配列の生成を行っていくことを表示
-		System.out.println("\n配列２");
+		System.out.println("\n行列b");
 		//二つ目の配列を生成
 		int[][] secondArray = createArray();
 		//二つ目の配列の要素の値を入力し列の数を取得
 		secondArrayColumn = inputElementValue(secondArray);
 		//三つ目の配列の生成を行っていくことを表示
-		System.out.println("\n配列３");
+		System.out.println("\n行列c");
 		//三つ目の配列を生成
 		int[][] thirdArray = createArray();
-		//三つ目の配列の要素の値を入力し列の数を取得
-		thirdArrayColumn = inputElementValue(thirdArray);
 
 		//三つの配列の要素数が等しければ加算、等しくなければ加算を行わない
 		boolean addMatrix = addMatrix(firstArray, secondArray, thirdArray);
 		//boolean値を表示
-		System.out.println(addMatrix);
+		System.out.println("\n" + addMatrix);
 
 		//配列１を表示
-		System.out.println("配列１");
+		System.out.println("\n行列a");
 		//配列１の要素を表示
 		printArray(firstArray);
 		//配列２を表示
-		System.out.println("配列２");
+		System.out.println("行列b");
 		//配列２の要素を表示
 		printArray(secondArray);
 		//配列３を表示
-		System.out.println("配列３");
+		System.out.println("行列c");
 		//配列３の要素を表示
 		printArray(thirdArray);
-		//加算した配列を表示
-		System.out.println("加算した結果");
-		//加算した配列の要素を表示
-		printArray(addMatrixArray);
 	}
 }
